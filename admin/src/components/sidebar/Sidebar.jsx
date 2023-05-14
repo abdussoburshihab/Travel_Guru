@@ -20,7 +20,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Shohoz Booking Admin Panel ({user.username})</span>
+          <span className="logo">Travel Guru Admin Panel ({user.username})</span>
         </Link>
       </div>
       <hr />
