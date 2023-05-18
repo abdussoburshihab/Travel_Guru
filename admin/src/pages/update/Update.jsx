@@ -29,21 +29,21 @@ const Update = ({ inputs, title }) => {
     data.append("file", file);
     data.append("upload_preset", "upload");
     try {
-      const uploadRes = await axios.post(
-        `https://api.cloudinary.com/v1_1/alnasimul/image/upload`,
-        data
-      );
+      // const uploadRes = await axios.post(
+      //   `https://api.cloudinary.com/v1_1/alnasimul/image/upload`,
+      //   data
+      // );
 
-      const { url } = uploadRes.data;
+     // const { url } = uploadRes.data;
 
       const updateUser = {
         ...info,
-        img: url,
+       // img: url,
       };
 
       console.log(updateUser);
 
-        const res =  await axios.put(`/${path}/${id}`, updateUser);
+        const res =  await axios.put(`http://localhost:5000/api/${path}/${id}`, updateUser);
         if(res.status === 200){
             window.location.replace(`/users/${id}`)
         }

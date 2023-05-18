@@ -55,13 +55,13 @@ const ReservationArea = ({ location }) => {
     try {
       await Promise.all(
         location.state.roomData.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId._id}`, {
+          const res = axios.put(`http://localhost:5000/api/rooms/availability/${roomId._id}`, {
             dates: location.state.alldates,
           });
           return res.data;
         })
       );
-      const allData = await axios.post("/payments/payment", reservationInfo);
+      const allData = await axios.post("http://localhost:5000/api/payments/payment", reservationInfo);
       // console.log(allData)
       window.location.href = allData.data.data;
     } catch (error) {}

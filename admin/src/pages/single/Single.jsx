@@ -9,16 +9,16 @@ const Single = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const path = location.pathname.split("/")[1];
-  const { data } = useFetch(`/${path}/${id}`);
+  const { data } = useFetch(`http://localhost:5000/api/${path}/${id}`);
   const navigate = useNavigate();
 
   const handleUpdateHotel = () => {
-    navigate(`/${path}/update/${data._id}`)
-  }
+    navigate(`/${path}/update/${data._id}`);
+  };
 
   const handleUpdateUser = () => {
-    navigate(`/${path}/update/${data._id}`)
-  }
+    navigate(`/${path}/update/${data._id}`);
+  };
 
   if (path === "users") {
     return (
@@ -27,14 +27,18 @@ const Single = () => {
         <div className="singleContainer">
           <div className="container w-50 top">
             <div className="left">
-              <div className="editButton" onClick={handleUpdateUser}>Edit</div>
+              <div className="editButton" onClick={handleUpdateUser}>
+                Edit
+              </div>
 
               <h1 className="title">Information</h1>
               <div className="item d-flex align-items-center justify-content-center">
-                <div>
-                  {" "}
-                  <img src={data.img} alt="" className="itemImg me-5" />
-                </div>
+               (
+                  <div>
+                    {" "}
+                    <img src={data.img} alt="" className="itemImg me-5" />
+                  </div>
+                )
                 <div className="details ms-5">
                   <h1 className="itemTitle">{data.username}</h1>
                   <div className="detailItem">
@@ -43,7 +47,7 @@ const Single = () => {
                   </div>
                   <div className="detailItem">
                     <h4 className="itemKey">Phone:</h4>
-                    <h5 className="itemValue">{data.phone}</h5>
+                    <h5 className="itemValue">{ data.phone}</h5>
                   </div>
                   <div className="detailItem">
                     <h4 className="itemKey">Address:</h4>
@@ -72,7 +76,9 @@ const Single = () => {
           <div className="container w-50 top">
             <div className="left">
               <Link to={`/${path}/update/${data._id}`}>
-                <div className="editButton" onClick={handleUpdateHotel}>Edit</div>
+                <div className="editButton" onClick={handleUpdateHotel}>
+                  Edit
+                </div>
               </Link>
               <div className="item d-flex align-items-center justify-content-center">
                 <div>

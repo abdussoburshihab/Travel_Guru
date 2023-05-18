@@ -20,12 +20,12 @@ const NewRoom = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const roomNumbers = rooms.split(",").map((room) => ({ number: room }));
+    const roomNumbersWithPrice = rooms.split(",").map((room) => ({ number: room, price: info.price }));
     try {
-      await axios.post(`/rooms/${hotelId}`, { ...info, roomNumbers });
+      await axios.post(`http://localhost:5000/api/rooms/${hotelId}`, { ...info, roomNumbersWithPrice });
     } catch (error) {}
     
-    console.log({hotelId, ...info, roomNumbers})
+    console.log({hotelId, ...info, roomNumbersWithPrice})
   };
 
 

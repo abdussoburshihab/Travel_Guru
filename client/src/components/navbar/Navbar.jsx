@@ -1,13 +1,13 @@
 import "./navbar.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import UserProfileDropdown from "../userProfileDropdown/UserProfileDropdown";
-//import { AuthContext } from "../../context/AuthContext";
-//import { useContext } from "react";
-//import Logout from "../logout/Logout";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+import Logout from "../logout/Logout";
 
 const Navbar = () => {
-  //const {user} = useContext(AuthContext);
-  //const navigate = useNavigate();
+  const {user} = useContext(AuthContext);
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="navContainer">

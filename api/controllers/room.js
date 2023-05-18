@@ -4,6 +4,8 @@ import { createError } from "../utils/error.js";
 
 export const createRoom = async (req, res, next) => {
   const hotelId = req.params.hotelid;
+
+  console.log(hotelId)
   const newRoom = new Room(req.body);
 
   try {

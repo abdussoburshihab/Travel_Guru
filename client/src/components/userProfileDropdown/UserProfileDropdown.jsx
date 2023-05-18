@@ -33,7 +33,7 @@ const UserProfileDropdown = () => {
   <div className="user-profile-dropdown__menu">
     <Link to={`/users/${user._id}`} className="user-profile-dropdown__link">Profile</Link>
     {/* <Link to="/settings" className="user-profile-dropdown__link">Settings</Link> */}
-    <Logout onLogout={logout} />
+    <Logout/>
   </div>
 )}
 

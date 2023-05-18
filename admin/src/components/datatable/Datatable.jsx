@@ -17,7 +17,7 @@ const Datatable = ({ columns, type }) => {
 
   const [list, setList] = useState([]);
 
-  const { data } = useFetch(`/${path}`);
+  const { data } = useFetch(`http://localhost:5000/api/${path}`);
 
   useEffect(() => {
     setList(data);
@@ -25,15 +25,15 @@ const Datatable = ({ columns, type }) => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
 
-  useEffect(async () => {
-    const res = await axios.get(`/${path}/search/${search}`);
-    console.log(res);
-    setList(res.data);
-  }, [search]);
+  // useEffect(async () => {
+  //   const res = await axios.get(`http://localhost:5000/api//${path}/search/${search}`);
+  //   console.log(res);
+  //   setList(res.data);
+  // }, [search]);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`http://localhost:5000/api/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
     } catch (error) {}
   };
@@ -63,12 +63,16 @@ const Datatable = ({ columns, type }) => {
               </div>
             )}
 
-            <div
-              className="deleteButton"
-              onClick={() => handleDelete(params.row._id)}
-            >
-              Delete
-            </div>
+            {path === "rooms" ? (
+              <></>
+            ) : (
+              <div
+                className="deleteButton"
+                onClick={() => handleDelete(params.row._id)}
+              >
+                Delete
+              </div>
+            )}
           </div>
         );
       },
@@ -79,7 +83,7 @@ const Datatable = ({ columns, type }) => {
 
   return (
     <div className="datatable">
-      {type && (
+      {/* {type && (
         <div className="search mb-4">
           <input
             type="text"
@@ -89,7 +93,7 @@ const Datatable = ({ columns, type }) => {
           />
           <SearchOutlinedIcon />
         </div>
-      )}
+      )} */}
       <div className="datatableTitle">
         {path}
         <Link to={`/${path}/new`} className="link">

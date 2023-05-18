@@ -1,5 +1,5 @@
 import Sidebar from "../../components/sidebar/Sidebar";
-import themephoto from "../../img/themephoto.jpg"
+import themephoto from "../../img/travel.jpg"
 //import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
 //import Widget from "../../components/widget/Widget";

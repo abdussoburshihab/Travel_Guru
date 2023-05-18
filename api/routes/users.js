@@ -15,17 +15,17 @@ router.get("/checkadmin/:id",verifyAdmin, (req,res,next) =>{
 })
 
 //Update
-router.put("/:id", verifyUser, updateUser);
+router.put("/:id", updateUser);
 
 //Delete
-router.delete("/:id", verifyUser, deleteUser);
+router.delete("/:id", deleteUser);
 
 //GET
-router.get("/:id", verifyUser, getUser);
-router.get("/search/:search", verifyUser, searchUser);
+router.get("/:id", getUser);
+router.get("/search/:search",  searchUser);
 
 //GET ALL
-router.get("/", verifyAdmin, getUsers);
+router.get("/", getUsers);
 
 //forgot password
 router.post("/forgot-password",forgotPassword);
