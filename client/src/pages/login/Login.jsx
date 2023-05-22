@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <>
         <Navbar />
-        <div className="login">
+        <div className="login" style={{backgroundColor:"teal"}}>
            <div className="lContainer">
             <input type="text" placeholder="Username" id="username" onChange={handleChange} className="lInput" />
             <input type="password" placeholder="Password" id="password" onChange={handleChange} className="lInput"/>

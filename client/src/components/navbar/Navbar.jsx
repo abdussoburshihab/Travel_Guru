@@ -5,11 +5,13 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import Logout from "../logout/Logout";
 
+
+
 const Navbar = () => {
   const {user} = useContext(AuthContext);
   const navigate = useNavigate();
   return (
-    <div className="navbar">
+    <div className="navbar" >
       <div className="navContainer">
         <Link to="/" style={{color:"inherit", textDecoration:"none"}}>
         <span className="logo" ><b>Travel Guru</b></span>

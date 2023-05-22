@@ -1,7 +1,7 @@
 .mail{
   width: 100%;
   margin-top: 50px;
-  background-color: #003580;
+  background-color: teal;
   color: white;
   display: flex;
   flex-direction: column;
@@ -27,4 +27,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#sub{
+  background-color: black;
+  
 }

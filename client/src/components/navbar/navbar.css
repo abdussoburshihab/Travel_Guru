@@ -3,6 +3,7 @@
   background-color: teal;
   display: flex;
   justify-content: center;
+  
 }
 
 .navContainer{
@@ -12,6 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .logo{
@@ -25,4 +27,5 @@
   cursor: pointer;
   color: #003580;
 }
+
 

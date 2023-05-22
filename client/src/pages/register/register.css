@@ -9,11 +9,16 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 350px;
+    transition: width 0.5s ease-in-out;
 }
 
 .regInput {
-    height: 25px;
-    padding: 10px;
+    height: 45px;
+    padding: 15px;
+   box-sizing: border-box;
+   border-radius: 5px;
+   
 }
 
 .regBtn {
@@ -29,4 +34,17 @@
 .regButton:disabled {
     background-color: #0071c28c;
     cursor: not-allowed;
+}
+
+
+
+.regInput:focus{
+    background-color: cadetblue;
+    
+}
+
+
+
+.regContainer:hover{
+    width: 50%;
 }

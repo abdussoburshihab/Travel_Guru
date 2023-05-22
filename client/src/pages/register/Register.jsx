@@ -5,6 +5,8 @@ import { axiosInstance } from "../../config";
 import { AuthContext } from "../../context/AuthContext";
 import "./register.css";
 
+
+
 const Register = () => {
   const [credentials, setCredentials] = useState({
     username: undefined,
@@ -75,7 +77,7 @@ const Register = () => {
   return (
     <>
       <Navbar />
-      <div className="register">
+      <div className="register" style={{backgroundColor: "teal"}} >
         <div className="regContainer">
           <input
             type="text"
@@ -100,6 +102,7 @@ const Register = () => {
             className="regInput"
           />
           <input
+          
             type="text"
             placeholder="City"
             id="city"
