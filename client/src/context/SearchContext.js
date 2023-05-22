@@ -2,7 +2,12 @@ import { createContext, useReducer } from "react";
 
 const INITIAL_STATE = {
   city: undefined,
-  dates: [],
+  dates: [
+    {
+      startDate: "",
+      endDate: ""
+    }
+  ],
   options: {
     adult: undefined,
     children: undefined,

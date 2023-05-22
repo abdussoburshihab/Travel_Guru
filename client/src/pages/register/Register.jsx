@@ -77,7 +77,7 @@ const Register = () => {
   return (
     <>
       <Navbar />
-      <div className="register" style={{backgroundColor: "teal"}} >
+      <div className="register" style={{}} >
         <div className="regContainer">
           <input
             type="text"

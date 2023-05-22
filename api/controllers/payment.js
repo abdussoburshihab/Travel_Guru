@@ -180,13 +180,13 @@ export const callBack = async (req, res, next) => {
       // mail options
 
       let mailOptions = {
-        from: `SHOHOZ BOOKING <alnasimul.dev@gmail.com>`, // sender address
+        from: `TRAVEL GURU <travelgurubd@gmail.com>`, // sender address
         to: cus_email, // list of receivers
         subject: "Reservation Cofirmation #" + opt_a, // Subject line
         text: "Hello World", // plain text body
         html: `
         <h3>Message</h3>
-        <p><strong> Thanks for your reservation from shohoz booking. </strong> &#128071;</p>
+        <p><strong> Thanks for your reservation from Travel Guru. </strong> &#128071;</p>
         <br>
               <h3>Client Details</h3>
                 <p><strong>Name:</strong> ${cus_name} </p>

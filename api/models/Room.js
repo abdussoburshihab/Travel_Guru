@@ -23,7 +23,7 @@ const RoomSchema = new mongoose.Schema(
       required: true,
     },
 
-    roomNumbers: [{ number: Number, unavailableDates: { type: [Date] }, price: {type: Number, required:true}  }],
+    roomNumbersWithPrice: [{ number: Number, unavailableDates: { type: [Date] }, price: {type: Number, required:true}  }],
   },
   { timestamps: true }
 );

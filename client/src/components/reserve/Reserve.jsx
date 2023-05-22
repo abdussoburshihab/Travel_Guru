@@ -116,7 +116,7 @@ const Reserve = ({ setOpen, hotelId, location, days }) => {
             )}
             <div className="rSelectRooms">
               {item &&
-                item.roomNumbers.map((roomNumber) => (
+                item.roomNumbersWithPrice.map((roomNumber) => (
                   <div className="room">
                     <label>{roomNumber.number}</label>
                     <input

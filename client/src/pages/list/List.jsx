@@ -18,11 +18,12 @@ const List = () => {
   const [max, setMax] = useState(undefined)
 
 const {data, loading, error, reFetch} = useFetch(
-  `/hotels?city=${destination}&min=${min || 10}&max=${max || 10000}`)
+  `http://localhost:5000/api/hotels?city=${destination}&min=${min || 10}&max=${max || 10000}`)
 
 const handleClick =() =>{
   reFetch()
 }
+console.log(location)
   return (
     <div>
       <Navbar />
