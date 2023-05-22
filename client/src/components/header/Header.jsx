@@ -89,7 +89,7 @@ const Header = ({ type }) => {
             </h1>
             <p className="headerDesc">
               Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Shohoz Booking account
+              more with a free Travel Guru account
             </p>
             {!user && <Link to="/register"><button className="headerBtn">Create an account</button></Link>}
             <div className="headerSearch">

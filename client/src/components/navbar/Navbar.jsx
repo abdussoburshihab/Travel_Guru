@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{color:"inherit", textDecoration:"none"}}>
-        <span className="logo">Travel Guru</span>
+        <span className="logo" ><b>Travel Guru</b></span>
         </Link>
         <UserProfileDropdown />
         {/* {user ? (

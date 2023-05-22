@@ -1,6 +1,6 @@
 .navbar{
   height: 70px;
-  background-color: #003580;
+  background-color: teal;
   display: flex;
   justify-content: center;
 }
@@ -25,3 +25,4 @@
   cursor: pointer;
   color: #003580;
 }
+
