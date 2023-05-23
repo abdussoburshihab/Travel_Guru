@@ -79,6 +79,8 @@ const Register = () => {
       <Navbar />
       <div className="register" style={{}} >
         <div className="regContainer">
+          
+          <h2>Register Here</h2>
           <input
             type="text"
             placeholder="Username"

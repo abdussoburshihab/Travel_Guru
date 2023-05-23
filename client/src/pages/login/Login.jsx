@@ -36,6 +36,7 @@ const Login = () => {
         <Navbar />
         <div className="login" style={{backgroundColor:"teal"}}>
            <div className="lContainer">
+            <h1>Login Here</h1>
             <input type="text" placeholder="Username" id="username" onChange={handleChange} className="lInput" />
             <input type="password" placeholder="Password" id="password" onChange={handleChange} className="lInput"/>
             <button disabled={loading} onClick={handleClick} className="lButton">Login</button>

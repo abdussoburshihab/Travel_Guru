@@ -3,17 +3,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(120deg, #3388c1,#161317);
 }
 
 .lContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: white;
+  position: absolute;
+  padding:  100px;
+  border-radius: 80px;
+  box-sizing: border-box;
+  width: 30%;
+    transition: width 0.5s ease-in-out;
+    transform: translateY(0%);
+    
+
 }
 
 .lInput {
   height: 30px;
-  padding: 10px;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #0071c2;
+  
 }
 
 .lButton {
@@ -29,4 +46,14 @@
 .lButton:disabled {
   background-color: #0071c28c;
   cursor: not-allowed;
+}
+
+.lContainer h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+.lContainer:hover{
+  width: 35%;
+  color: #0071c2;
 }
